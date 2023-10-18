@@ -1,0 +1,42 @@
+The words - predefined tokens are specified between " && ":
+
+Sintactical rules: (file Syntax.in)
+
+program ::= decllist | stmtlist
+
+decllist ::= declaration | declaration "," decllist
+
+declaration ::= type " " IDENTIFIER
+
+type1 ::= "boolean" | "int" 
+
+arraydecl ::= "arr" "[" nr "]" "of" type1
+
+type  ::= type1|arraydecl
+
+stmtlist ::= stmt | stmt "endl" stmtlist
+
+stmt ::= simplstmt | structstmt
+
+simplstmt ::= assignstmt | iostmt
+
+assignstmt ::= IDENTIFIER "=" expression
+
+expression ::= expression "+" term | term
+
+term ::= term "*" factor | factor
+
+factor ::= "(" expression ")" | IDENTIFIER
+
+iostmt ::= "input" | "print" "<<" IDENTIFIER ">>"
+
+structstmt ::= cmpdstmt | ifstmt | whilestmt
+
+ifstmt ::= "if" condition  stmt ["else" stmt]
+
+whilestmt ::= "while" condition stmt
+
+condition ::= "[" expression RELATION expression "]" 
+
+RELATION ::= "<" | "<=" | "==" | "<>" | ">=" | ">"
+
