@@ -1,0 +1,85 @@
+#p1#
+
+int num = int(input<<"Enter a number: ">>)
+
+int i
+boolean flag = F
+
+if [num == 1]
+	print<<num, "is not a prime number">>
+else
+	if [num > 1]
+		for i:[2, num]
+        		if [(num % i) == 0]
+            			flag = T
+            			break
+
+# check if flag is True#
+if [flag]
+        print<<num, "is not a prime number">>
+else
+        print<<num, "is a prime number">>
+
+
+#p1err#
+
+
+int num = int(input\\"Enter a number: "\\)
+
+int i
+boolean flag = F
+
+if [num == 1]
+	print<<num, "is not a prime number">>
+else
+	if [num > 1]
+		for i:[2, num]
+        		if [(num % i) == 0]
+            			flag = T
+            			break
+
+# check if flag is True#
+if [flag]
+        print<<num, "is not a prime number">>
+else
+        print<<num, "is a prime number">>
+
+
+
+#p2#
+
+define int maximum(a, b, c)
+    int largest
+    if [a >= b] && [a >= c]
+        largest = a
+
+    else
+	if [b >= a] && [b >= c]
+        	largest = b
+    else
+        largest = c
+
+    ret largest
+
+
+int a = 10
+int b = 14
+int c = 12
+print<<maximum(a, b, c)>>
+
+
+#p3#
+int sum = 0
+int i,num
+print<<"Enter the Value of n: ">>
+int n = int(input<<>>)
+print<<"Enter " + str(n) + " Numbers: ">>
+for i:[0,n]
+    num = int(input<<>>)
+    sum = sum+num
+print<<"Sum of " + str(n) + " Numbers = " + str(sum)>>
+
+
+
+
+
